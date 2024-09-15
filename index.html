@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Kyun Designs">
+	
+    <meta name="thesis" content="computer science">
+    <meta name="thesis" content="it">
+    <meta name="capstone" content="it">
+    <meta name="web solutions" content="website">
+	
+    <title>Quiz Timer</title>
+
+	<link rel = "icon" src = "img/tcu logo.png" type = "image/png">
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-social.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="css/cosmo.css" rel="stylesheet">
+	
+	<link href="css/custom-style.css" rel="stylesheet">
+	<link href="css/custom-nav-bs.css" rel="stylesheet">
+	<link href="css/custom-dropdown-bs.css" rel="stylesheet">	
+</head>
+
+<body data-spy = "scroll" data-target = ".nav" data-offset = "150">
+
+	<nav class = "nav navbar-default navbar-fixed-top">
+		<div class = "container-fluid">
+		
+			<!--
+			<div class = "navbar-header">
+				
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbarmenu" aria-haspopup = "true">
+					<span class = "sr-only">Toggle Navigation</span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				
+				<a class = "navbar-brand">
+					<h4 class = "btn-brand">
+						<span class = "fa fa-hourglass-half"></span>
+						<b>Quiz Timer</b>
+					</h4>
+				</a>
+			</div>
+			
+			
+			
+			<ul class = "nav navbar-nav navbar-right" id = "navbarmenu">
+			
+				<li class = "">
+									
+						
+					
+				</li>
+				
+				<!--
+				-->
+				
+				<li>
+					<a class = "modal" role = "button" data-target = "#modalhere" data-toggle = "modal">	
+						<h4>
+							<span class = "fa fa-pencil-square"></span>
+							View Saved Durations
+						</h4>
+					</a>
+				</li>
+				
+				
+			
+			</ul>			
+			
+		</div>
+	</nav> <!--  end of nav -->
+	
+	<div class = "modal fade" id = "modalhere" aria-hidden = "true">
+		<div class = "modal-dialog">			
+				<div class = "modal-content">				
+					<div class = "modal-header">
+						<h4 class = "pull-left">Saved Durations</h4>
+						<button class = "btn btn-inverse pull-right" type = "button" data-dismiss = "modal">
+							<i class = "fa fa-times"></i>
+							Close
+						</button>
+					</div>
+					<div class = "modal-body" id = "textfilecontent">
+						
+					</div>
+				
+				</div>
+		</div>
+	</div>
+	<div class = "container-fluid">
+		<div class = "jumbotron text-center">			
+		
+		<img src = "img/2.gif" class = "img-responsive img-centered bombhere"/>
+				<div class = "row timertext">
+				
+				<h3>
+					<span class = "fa fa-clock-o"></span>
+					<span class = "timeselected">Quiz Timer</span>
+				</h3>
+				
+			
+					<div class = "col-md-2 min col-md-offset-1">
+					00
+					</div>
+					<div class = "col-md-1">:</div>
+					<div class = "col-md-3 sec">
+					00
+					</div>
+					<div class = "col-md-1">:</div>
+					<div class = "col-md-2 ms">
+					00
+					</div>
+					
+				</div>
+		
+	
+				<div class = "row">
+				
+					<div class = "col-md-3 btn btn-success startbutton" rel = "30S">
+						
+						<h2>
+							<i class = "fa fa-play"></i><br>
+							30 Seconds
+						</h2>
+						
+					</div>
+					
+					<div class = "col-md-3 btn btn-success startbutton" rel = "1M">
+						
+						<h2>
+							<i class = "fa fa-play"></i><br>
+							1 Minute
+						</h2>
+						
+					</div>
+					<div class = "col-md-3 btn btn-success startbutton" rel = "2M">
+						
+						<h2>
+							<i class = "fa fa-play"></i><br>
+							2 Minutes
+						</h2>
+						
+					</div>
+					<div class = "col-md-3 btn btn-success startbutton" rel = "3M">
+						
+						<h2>
+							<i class = "fa fa-play"></i><br>
+							3 Minutes
+						</h2>
+						
+					</div>
+					
+					
+				</div>
+			
+				
+				<div class = "row opbuttons">
+				
+					<div class = "col-md-6 btn btn-danger stopbutton">
+						
+							<h2>
+								<i class = "fa fa-pause"></i><br>
+								Stop
+							</h2>
+					
+					</div>
+					
+					<div class = "col-md-6 btn btn-success resumebutton">
+						
+							<h2>
+								<i class = "fa fa-play"></i><br>
+								Resume
+							</h2>
+					
+					</div>
+					
+					<a href = "" class = "col-md-6 btn btn-default resetbutton">	
+						
+							<h2>
+								<i class = "fa fa-refresh"></i><br>
+								Reset
+							</h2>
+						
+					</a>					
+					
+				</div>
+				
+				<div class = "row">
+					<a href = "" class = "col-md-4 col-md-offset-4 btn btn-default endReset">	
+						
+							<h2>
+								<i class = "fa fa-refresh"></i><br>
+								Reset
+							</h2>
+						
+					</a>		
+				</div>
+				
+				
+		</div>
+		
+		<audio id = "tick">
+			<source src = "js/ticklang.mp3" type = "audio/mpeg">
+			<source src = "js/ticklang.ogg" type = "audio/ogg">
+		</audio>
+		
+		<audio id = "tickbomb">
+			<source src = "js/tickwithbomb.wav" type = "audio/wav">
+			<source src = "js/tickwithbomb.ogg" type = "audio/ogg">
+		</audio>
+	<section class = "text-center">
+		<h4>Developed by Kyun &copy; 2017 | TAGUIG CITY UNIVERSITY</h4>
+	</section>
+	
+	</div>
+	
+	
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/function.js"></script>
+	<script src="js/bootstrap_ulet.min.js"></script>
+	<script src="js/bootstrap_ulet.js"></script>
+	
+</body>
+
+</html>
